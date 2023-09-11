@@ -1,4 +1,6 @@
-import React from 'react'
+import {Component} from 'react'
+
+import './index.css'
 
 const HistoryItem = props => {
   const {historyItem, deleteItem} = props
@@ -12,7 +14,7 @@ const HistoryItem = props => {
     <li>
       <div className="list-item">
         <p>{timeAccessed}</p>
-        <p>{logoUrl} alt="domain logo"</p>
+        <img src={logoUrl} alt="domain logo" />
         <p>{title}</p>
         <p>{domainUrl}</p>
       </div>
@@ -22,6 +24,7 @@ const HistoryItem = props => {
             src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
             alt="delete"
             className="button-type"
+            data-testid="delete"
           />
         </button>
       </div>

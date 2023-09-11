@@ -10,6 +10,7 @@ const initialHistoryList = [
     logoUrl: 'https://assets.ccbp.in/frontend/react-js/instagram-img.png',
     title: 'Instagram',
     domainUrl: 'instagram.com',
+    datatestid: 'delete',
   },
   {
     id: 1,
@@ -94,7 +95,8 @@ class BrowserHistory extends Component {
 
   deleteItem = id => {
     const {historyList} = this.state
-    const {filteredList} = historyList.filter(each => each.id !== id)
+    const filteredList = historyList.filter(each => each.id !== id)
+
     this.setState({historyList: filteredList})
   }
 
